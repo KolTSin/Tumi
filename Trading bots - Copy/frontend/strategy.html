@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strategy Explorer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-papnmN0Nusm3rYJUNuQu4YpP5zTJYcHu8MSpLeV/tqDHM3MfEIQqDwCHXkcvYfpxLO1Md8ax79F9OdoUJqvqmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="animated-bg"></div>
+    <div class="blur-vignette"></div>
+    <div class="container strategy">
+      <header class="hero-card">
+        <h1 class="title">Strategy Explorer</h1>
+        <p class="subtitle">Dive into each bot’s logic and performance. Discover where it shines, where it fails, and how it compares.</p>
+      </header>
+
+      <section class="strategy-grid">
+        <div class="strategy-card">
+          <div class="strategy-header">
+            <span class="strategy-icon">⚡</span>
+            <h2 class="strategy-title">Momentum</h2>
+          </div>
+          <p class="strategy-description">
+            Buys when price is rising, sells when it starts to fall. Thrives in trending markets.
+          </p>
+          <div class="strategy-meta">
+            <p class="strategy-label">Best For:</p>
+            <ul class="strategy-bullets">
+              <li>Trending markets</li>
+              <li>Breakouts</li>
+            </ul>
+          </div>
+          <canvas class="strategy-chart" id="momentumChart"></canvas>
+          <div class="strategy-tags">
+            <span class="tag-brutal">#trending</span>
+            <span class="tag-brutal">#breakout</span>
+            <span class="tag-brutal">#volatility</span>
+          </div>
+          <div class="strategy-actions">
+            <a href="scenario.html" class="primary-btn">Try in Scenario Lab</a>
+          </div>
+        </div>
+
+        <div class="strategy-card">
+          <div class="strategy-header">
+            <span class="strategy-icon">🔄</span>
+            <h2 class="strategy-title">Mean Reversion</h2>
+          </div>
+          <p class="strategy-description">
+            Buys when the asset deviates below its average, sells when it returns. Great for sideways movement.
+          </p>
+          <div class="strategy-meta">
+            <p class="strategy-label">Best For:</p>
+            <ul class="strategy-bullets">
+              <li>Oscillating markets</li>
+              <li>Statistical edges</li>
+            </ul>
+          </div>
+          <canvas class="strategy-chart" id="meanReversionChart"></canvas>
+          <div class="strategy-tags">
+            <span class="tag-brutal">#rangebound</span>
+            <span class="tag-brutal">#mean-reverting</span>
+            <span class="tag-brutal">#low-vol</span>
+          </div>
+          <div class="strategy-actions">
+            <a href="scenario.html" class="primary-btn">Try in Scenario Lab</a>
+          </div>
+        </div>
+
+        <div class="strategy-card">
+          <div class="strategy-header">
+            <span class="strategy-icon">🎲</span>
+            <h2 class="strategy-title">Random</h2>
+          </div>
+          <p class="strategy-description">
+            Makes random buy/sell decisions. Ideal as a baseline to evaluate strategy value.
+          </p>
+          <div class="strategy-meta">
+            <p class="strategy-label">Use For:</p>
+            <ul class="strategy-bullets">
+              <li>Benchmarking</li>
+              <li>Stress testing</li>
+            </ul>
+          </div>
+          <canvas class="strategy-chart" id="randomChart"></canvas>
+          <div class="strategy-tags">
+            <span class="tag-brutal">#benchmark</span>
+            <span class="tag-brutal">#neutral</span>
+            <span class="tag-brutal">#chaotic</span>
+          </div>
+          <div class="strategy-actions">
+            <a href="scenario.html" class="primary-btn">Try in Scenario Lab</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="tip-box">
+        <p><strong>Tip:</strong> Hover over a strategy to view when it underperforms most — and avoid those traps in your scenarios.</p>
+      </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="./src/strategy.js"></script>
+  </body>
+</html>

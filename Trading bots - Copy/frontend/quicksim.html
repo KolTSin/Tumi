@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Sim</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="animated-bg"></div>
+    <div class="blur-vignette"></div>
+    <div class="container quicksim">
+      <header class="hero-card">
+        <h1 class="title">Quick Simulation</h1>
+        <p class="subtitle">Select one or more bots and run a Monte Carlo simulation instantly.</p>
+      </header>
+
+      <section class="top-section">
+        <div class="card">
+          <label for="bot-select">Select Strategies:</label>
+          <select id="bot-select" multiple size="3"></select>
+
+          <label for="runs">Monte Carlo Runs:</label>
+          <input type="number" id="runs" value="10" min="1" max="100" />
+
+          <button class="simulate-btn">Run Simulation</button>
+        </div>
+
+        <div class="card">
+          <h2 class="section-heading">Portfolio Evolution</h2>
+          <canvas id="simulationChart"></canvas>
+        </div>
+      </section>
+
+      <div id="metrics-panel" class="metrics-grid"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
